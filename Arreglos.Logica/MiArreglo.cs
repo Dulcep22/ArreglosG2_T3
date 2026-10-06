@@ -19,8 +19,8 @@ namespace Arreglos.Logica
             N = n;
             _arreglo = new int[N];
             _tope = 0;
-
-
+        
+       
         }
 
         //Propiedades
@@ -46,12 +46,13 @@ namespace Arreglos.Logica
         {
             Ordenar(true);
         }
+
         //Método Ordenar
         public void Ordenar( bool ascendente)
         {
-            for (int i=0; i< _tope - 1; i++)
+            for (int i = 0; i < _tope - 1; i++)
             {
-                for (int j= i + 1; j <_tope; j++)
+                for (int j = i + 1; j <_tope; j++)
                 {
                     if (ascendente)
                     {
@@ -74,16 +75,31 @@ namespace Arreglos.Logica
             }
         }
 
-
-
         //Método Cambiar
 
-        public void Cambiar(int a, ref int b)
+        public void Cambiar(ref int a, ref int b)
         {
             int aux =a;
             a = b;
             b = aux;
         }
+
+
+        //Método agregar
+
+        public void Agregar(int numero)
+        {
+            if(EstaLleno)
+            {
+                throw new Exception("El arreglo esta lleno");
+            }
+            else
+            
+                _arreglo[_tope]= numero;
+                _tope++;
+            
+        }
+
 
 
         public override string ToString()
