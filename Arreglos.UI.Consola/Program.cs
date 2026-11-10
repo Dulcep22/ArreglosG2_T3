@@ -23,13 +23,19 @@ internal class Program
             Console.WriteLine(verPares);
 
             Console.ReadKey();
-
             Console.WriteLine("\nPares ordenados\n");
             verPares.Ordenar();
             Console.WriteLine(verPares);
 
+            Console.ReadKey();
+            Console.WriteLine("\nPrimos\n");
+            var verPrimos = oMiArreglo.ObtenerPrimos();
+            Console.WriteLine(verPrimos);
 
-
+            Console.ReadKey();
+            Console.WriteLine("\nPrimos ordenados\n");
+            verPrimos.Ordenar();
+            Console.WriteLine(verPrimos);
 
             //oMiArreglo.Agregar(10);
             //oMiArreglo.Agregar(5);
